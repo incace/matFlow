@@ -1,0 +1,19 @@
+# ignore IDE/hidden/OS cache files
+*.tmp
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# ignore directories/files
+/app
+/scratch
+/screenshots
+css/raw/global.min.css
+css/raw/blog.min.css
+css/compressed/global.css
+css/compressed/blog.css
+*.sublime-project
+*.sublime-workspace
+*.dat
