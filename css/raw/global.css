@@ -2,8 +2,13 @@
 =         matFlow.dark - [WorkFlowy]          =
 =============================================*/
 /*
-matFlow.dark is a dark theme for the WorkFlowy web app. It started initially as a few tweaks locally and ended up turning into a full-blown theme. It has a flat clean design that enables your eyes to relax and focus on what is important; sex, drugs and EDM. There are a ton of bugs.
+		matFlow.dark is a dark theme for the WorkFlowy web app. It started initially as a few tweaks locally and ended up turning into a full-blown theme. It has a flat clean design that enables your eyes to relax and focus on what is important; sex, drugs and EDM. There are a ton of bugs.
 */
+
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'),local('OpenSans-Light'),url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs.woff2) format('woff2')}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans'),local('OpenSans'),url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format('woff2')}@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans Semibold'),local('OpenSans-Semibold'),url(https://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNShampu5_7CjHW5spxoeN3Vs.woff2) format('woff2')}@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'),local('OpenSans-Bold'),url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzBampu5_7CjHW5spxoeN3Vs.woff2) format('woff2')}
+
+@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:local('Roboto Light'),local('Roboto-Light'),url(https://fonts.gstatic.com/s/roboto/v16/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2')}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local('Roboto'),local('Roboto-Regular'),url(https://fonts.gstatic.com/s/roboto/v16/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2')}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(https://fonts.gstatic.com/s/roboto/v16/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2')}@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:local('Roboto Bold'),local('Roboto-Bold'),url(https://fonts.gstatic.com/s/roboto/v16/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2')}
+
 body,
 #pageContainer {
 	font-weight: normal;
@@ -13,6 +18,19 @@ body,
 body {
 	color: #EEE;
 	background: #2B2E2F;
+}
+body,
+#documentView,
+#searchBox,
+.saveButton,
+.showCompletedButton,
+#buttonBar,
+#helpButton,
+#savedViewHUD,
+#controlsLeft,
+#itemSelectionControls,
+.ui-widget {
+    font-family: 'Roboto', sans-serif;
 }
 a:link,
 a:active,
@@ -168,7 +186,7 @@ a:active,
 	height: 40px;
 }
 #logo {
-	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4yLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA0OTIuNSA0OTIuNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDkyLjUgNDkyLjU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiM5N0JGQ0M7fQ0KCS5zdDF7ZmlsbDojRkZGRkZGO30NCjwvc3R5bGU+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDQ3LjEzLDM3LjA0bC0zNDkuMzYsMGMtMTkuNTMsMC0zNS4zNywxNS44My0zNS4zNywzNS4zN3YwYzAsMTkuNTMsMTUuODMsMzUuMzcsMzUuMzcsMzUuMzdsMzQ5LjM2LDANCgljMTkuNTMsMCwzNS4zNy0xNS44MywzNS4zNy0zNS4zN3YwQzQ4Mi40OSw1Mi44OCw0NjYuNjYsMzcuMDQsNDQ3LjEzLDM3LjA0eiIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTQ0Ny4xMywyMTAuOTNsLTI1Mi41MywwYy0xOS41MywwLTM1LjM3LDE1LjgzLTM1LjM3LDM1LjM3djBjMCwxOS41MywxNS44MywzNS4zNywzNS4zNywzNS4zN2wyNTIuNTMsMA0KCWMxOS41MywwLDM1LjM3LTE1LjgzLDM1LjM3LTM1LjM3djBDNDgyLjQ5LDIyNi43Nyw0NjYuNjYsMjEwLjkzLDQ0Ny4xMywyMTAuOTN6Ii8+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDQ3LjEzLDM4NC43M2wtMzQ5LjM2LDBjLTE5LjUzLDAtMzUuMzcsMTUuODMtMzUuMzcsMzUuMzd2MGMwLDE5LjUzLDE1LjgzLDM1LjM3LDM1LjM3LDM1LjM3bDM0OS4zNiwwDQoJYzE5LjUzLDAsMzUuMzctMTUuODMsMzUuMzctMzUuMzd2MEM0ODIuNDksNDAwLjU2LDQ2Ni42NiwzODQuNzMsNDQ3LjEzLDM4NC43M3oiLz4NCjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik03Mi40MSwxMC4wMWMtMzQuNCwwLTYyLjQsMjgtNjIuNCw2Mi40czI4LDYyLjQsNjIuNCw2Mi40czYyLjQtMjgsNjIuNC02Mi40UzEwNi44MSwxMC4wMSw3Mi40MSwxMC4wMXoiLz4NCjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xNzYuOTIsMTgzLjljLTM0LjQsMC02Mi40LDI4LTYyLjQsNjIuNHMyOCw2Mi40LDYyLjQsNjIuNHM2Mi40LTI4LDYyLjQtNjIuNFMyMTEuMzIsMTgzLjksMTc2LjkyLDE4My45eiIvPg0KPHBhdGggY2xhc3M9InN0MSIgZD0iTTcyLjQxLDM1Ny42OWMtMzQuNCwwLTYyLjQsMjgtNjIuNCw2Mi40czI4LDYyLjQsNjIuNCw2Mi40czYyLjQtMjgsNjIuNC02Mi40UzEwNi44MSwzNTcuNjksNzIuNDEsMzU3LjY5eiIvPg0KPC9zdmc+DQo=');
+	background-image: url('https://rawgit.com/incace/matFlow/master/assets/logo.svg');
 	background-position: center center;
 	background-size: 24px;
 	background-color: #4a88b3;
@@ -251,7 +269,7 @@ a:active,
 	width: 40px;
 	height: 40px;
 	margin: 0;
-	background: url('data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNDc1LjA3NSA0NzUuMDc1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NzUuMDc1IDQ3NS4wNzU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNNDc1LjA3NSwxODYuNTczYzAtNy4wNDMtNS4zMjgtMTEuNDItMTUuOTkyLTEzLjEzNUwzMTUuNzY2LDE1Mi42TDI1MS41MjksMjIuNjk0Yy0zLjYxNC03LjgwNC04LjI4MS0xMS43MDQtMTMuOTktMTEuNzA0ICAgYy01LjcwOCwwLTEwLjM3MiwzLjktMTMuOTg5LDExLjcwNEwxNTkuMzEsMTUyLjZMMTUuOTg2LDE3My40MzhDNS4zMywxNzUuMTUzLDAsMTc5LjUzLDAsMTg2LjU3M2MwLDMuOTk5LDIuMzgsOC41NjcsNy4xMzksMTMuNzA2ICAgbDEwMy45MjQsMTAxLjA2OEw4Ni41MSw0NDQuMDk2Yy0wLjM4MSwyLjY2Ni0wLjU3LDQuNTc1LTAuNTcsNS43MTJjMCwzLjk5NywwLjk5OCw3LjM3NCwyLjk5NiwxMC4xMzYgICBjMS45OTcsMi43NjYsNC45OTMsNC4xNDIsOC45OTIsNC4xNDJjMy40MjgsMCw3LjIzMy0xLjEzNywxMS40Mi0zLjQyM2wxMjguMTg4LTY3LjM4NmwxMjguMTk0LDY3LjM3OSAgIGM0LDIuMjg2LDcuODA2LDMuNDMsMTEuNDE2LDMuNDNjNy44MTIsMCwxMS43MTQtNC43NSwxMS43MTQtMTQuMjcxYzAtMi40NzEtMC4wOTYtNC4zNzQtMC4yODctNS43MTZsLTI0LjU1MS0xNDIuNzQ0ICAgbDEwMy42MzQtMTAxLjA2OUM0NzIuNjA0LDE5NS4zMyw0NzUuMDc1LDE5MC43Niw0NzUuMDc1LDE4Ni41NzN6IE0zMjQuNjE5LDI4OC41bDIwLjU1MSwxMjAuMmwtMTA3LjYzNC01Ni44MjFMMTI5LjYxNCw0MDguNyAgIGwyMC44NDMtMTIwLjJsLTg3LjM2NS04NC43OTlsMTIwLjQ4NC0xNy43bDUzLjk1OS0xMDkuMDY0bDUzLjk1NywxMDkuMDY0bDEyMC40OTQsMTcuN0wzMjQuNjE5LDI4OC41eiIgZmlsbD0iI2M1NTA0NCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=');
+	background: url('https://rawgit.com/incace/matFlow/master/assets/star-red.svg');
 	background-size: 24px;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -261,7 +279,7 @@ a:active,
 }
 #savedViewHUDButton:hover,
 #savedViewHUDButton:active {
-	background: url('data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNDc1LjA3NSA0NzUuMDc1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NzUuMDc1IDQ3NS4wNzU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNNDc1LjA3NSwxODYuNTczYzAtNy4wNDMtNS4zMjgtMTEuNDItMTUuOTkyLTEzLjEzNUwzMTUuNzY2LDE1Mi42TDI1MS41MjksMjIuNjk0Yy0zLjYxNC03LjgwNC04LjI4MS0xMS43MDQtMTMuOTktMTEuNzA0ICAgYy01LjcwOCwwLTEwLjM3MiwzLjktMTMuOTg5LDExLjcwNEwxNTkuMzEsMTUyLjZMMTUuOTg2LDE3My40MzhDNS4zMywxNzUuMTUzLDAsMTc5LjUzLDAsMTg2LjU3M2MwLDMuOTk5LDIuMzgsOC41NjcsNy4xMzksMTMuNzA2ICAgbDEwMy45MjQsMTAxLjA2OEw4Ni41MSw0NDQuMDk2Yy0wLjM4MSwyLjY2Ni0wLjU3LDQuNTc1LTAuNTcsNS43MTJjMCwzLjk5NywwLjk5OCw3LjM3NCwyLjk5NiwxMC4xMzYgICBjMS45OTcsMi43NjYsNC45OTMsNC4xNDIsOC45OTIsNC4xNDJjMy40MjgsMCw3LjIzMy0xLjEzNywxMS40Mi0zLjQyM2wxMjguMTg4LTY3LjM4NmwxMjguMTk0LDY3LjM3OSAgIGM0LDIuMjg2LDcuODA2LDMuNDMsMTEuNDE2LDMuNDNjNy44MTIsMCwxMS43MTQtNC43NSwxMS43MTQtMTQuMjcxYzAtMi40NzEtMC4wOTYtNC4zNzQtMC4yODctNS43MTZsLTI0LjU1MS0xNDIuNzQ0ICAgbDEwMy42MzQtMTAxLjA2OUM0NzIuNjA0LDE5NS4zMyw0NzUuMDc1LDE5MC43Niw0NzUuMDc1LDE4Ni41NzN6IE0zMjQuNjE5LDI4OC41bDIwLjU1MSwxMjAuMmwtMTA3LjYzNC01Ni44MjFMMTI5LjYxNCw0MDguNyAgIGwyMC44NDMtMTIwLjJsLTg3LjM2NS04NC43OTlsMTIwLjQ4NC0xNy43bDUzLjk1OS0xMDkuMDY0bDUzLjk1NywxMDkuMDY0bDEyMC40OTQsMTcuN0wzMjQuNjE5LDI4OC41eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=');
+	background: url('https://rawgit.com/incace/matFlow/master/assets/star.svg');
 	background-size: 24px;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -276,17 +294,17 @@ a:active,
 	width: 40px;
 }
 #buttonBar .menu-icon {
-	background: url('data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4IiB2aWV3Qm94PSIwIDAgNjEyIDYxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNjEyIDYxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxnPgoJCTxjaXJjbGUgY3g9IjY5LjU0NSIgY3k9IjMwNiIgcj0iNjkuNTQ1IiBmaWxsPSIjRkZGRkZGIi8+CgkJPGNpcmNsZSBjeD0iMzA2IiBjeT0iMzA2IiByPSI2OS41NDUiIGZpbGw9IiNGRkZGRkYiLz4KCQk8Y2lyY2xlIGN4PSI1NDIuNDU1IiBjeT0iMzA2IiByPSI2OS41NDUiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K');
+	background: url('https://rawgit.com/incace/matFlow/master/assets/menu.svg');
 	margin: 0;
 	padding: 8px;
 	width: 24px;
 	height: 24px;
 }
 #buttonBar:hover .menu-icon {
-	background: url('data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4IiB2aWV3Qm94PSIwIDAgNjEyIDYxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNjEyIDYxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxnPgoJCTxjaXJjbGUgY3g9IjY5LjU0NSIgY3k9IjMwNiIgcj0iNjkuNTQ1IiBmaWxsPSIjMjdhZTYwIi8+CgkJPGNpcmNsZSBjeD0iMzA2IiBjeT0iMzA2IiByPSI2OS41NDUiIGZpbGw9IiMyN2FlNjAiLz4KCQk8Y2lyY2xlIGN4PSI1NDIuNDU1IiBjeT0iMzA2IiByPSI2OS41NDUiIGZpbGw9IiMyN2FlNjAiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K');
+	background: url('https://rawgit.com/incace/matFlow/master/assets/menu-h.svg');
 }
 #buttonBar.open .menu-icon {
-	background: url('data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4IiB2aWV3Qm94PSIwIDAgNjEyIDYxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNjEyIDYxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxnPgoJCTxjaXJjbGUgY3g9IjY5LjU0NSIgY3k9IjMwNiIgcj0iNjkuNTQ1IiBmaWxsPSIjMjdhZTYwIi8+CgkJPGNpcmNsZSBjeD0iMzA2IiBjeT0iMzA2IiByPSI2OS41NDUiIGZpbGw9IiMyN2FlNjAiLz4KCQk8Y2lyY2xlIGN4PSI1NDIuNDU1IiBjeT0iMzA2IiByPSI2OS41NDUiIGZpbGw9IiMyN2FlNjAiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K');
+	background: url('https://rawgit.com/incace/matFlow/master/assets/menu-h.svg');
 	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg);
 }
@@ -317,8 +335,7 @@ a:active,
 }
 .menu-options>.button {
 	padding: 10px 20px;
-	font-size: 12px;
-	letter-spacing: 1px;
+	font-size: 13px;
 	text-transform: uppercase;
 }
 .menu-options>.button:first-child {
@@ -371,13 +388,13 @@ a:active,
 	height: 24px;
 }
 .undo-icon {
-	background: url('data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4IiB2aWV3Qm94PSIwIDAgNDMwLjkyNCA0MzAuOTI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MzAuOTI0IDQzMC45MjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMTM0LDQwMy4yNDNjMjIuNjQxLDEwLjg3NSw0Ny40NjksMTcuODEzLDczLjcxOSwxOS44MTN2LTY0LjgxM2MtMTQuNTk0LTEuNjI1LTI4LjY3Mi00LjkwNi00MS42MjUtMTAuNTk0TDEzNCw0MDMuMjQzeiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTxwYXRoIGQ9Ik0zNjYuMTA5LDE5OS44NjhoNjQuODE0Yy04LjI1LTEwNy4yMTktOTcuOTM5LTE5Mi0yMDcuMjAzLTE5MmMtNjQuMjgyLDAtMTI0LjcxOSwzMC4wOTQtMTYzLjgxMyw3OS45NjlMMC4xMjUsNTMuMjc0ICAgIEwwLDI1MS4xMThsMTcxLjM5MS05OC44MTNsLTU1LjA5NC0zMS44NzVjMjcuMDYzLTMwLjMxMyw2Ni00OC41NjMsMTA3LjQyMS00OC41NjMgICAgQzI5Ny42NzIsNzEuODY4LDM1OC4wNDcsMTI4LjA1NSwzNjYuMTA5LDE5OS44Njh6IiBmaWxsPSIjRkZGRkZGIi8+CgkJPHBhdGggZD0iTTEwOC4yMTksMzAxLjAyNGwtNTUuOTg0LDMyLjMxMmMxNC41MzEsMjEuMTU2LDMyLjg1OSwzOS40Nyw1NC4wMTYsNTQuMDMxbDMyLjMxMy01NiAgICBDMTI2Ljk4NSwzMjIuODA1LDExNi43ODIsMzEyLjU4NiwxMDguMjE5LDMwMS4wMjR6IiBmaWxsPSIjRkZGRkZGIi8+CgkJPHBhdGggZD0iTTIzOS43MzUsMzU4LjI0M3Y2NC44MTNjMjYuMjUtMiw1MS4wNjMtOC45MzgsNzMuNjg4LTE5LjgxM2wtMzIuMDY0LTU1LjU5NCAgICBDMjY4LjM1OSwzNTMuMzM2LDI1NC4yOTcsMzU2LjYxOCwyMzkuNzM1LDM1OC4yNDN6IiBmaWxsPSIjRkZGRkZGIi8+CgkJPHBhdGggZD0iTTMwOC44NTksMzMxLjM2OGwzMi4zMTQsNTZjMjEuMTg4LTE0LjU2MiwzOS41LTMyLjg3NSw1NC4wNjItNTQuMDMxbC01Ni0zMi4zMTIgICAgQzMzMC42NzIsMzEyLjU4NiwzMjAuNDg0LDMyMi44MDUsMzA4Ljg1OSwzMzEuMzY4eiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTxwYXRoIGQ9Ik0zNTUuNTQ3LDI3My40NjFsNTUuNTYyLDMyLjA5NGMxMC44NzUtMjIuNjI1LDE3LjgxNC00Ny40MzgsMTkuODE0LTczLjY4OGgtNjQuODE0ICAgIEMzNjQuNDg0LDI0Ni40NjEsMzYxLjE3MiwyNjAuNTI0LDM1NS41NDcsMjczLjQ2MXoiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K');
+	background: url('https://rawgit.com/incace/matFlow/master/assets/undo.svg');
 	background-size: 24px;
 	background-position: center center;
 	background-repeat: no-repeat;
 }
 .redo-icon {
-	background: url('data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4IiB2aWV3Qm94PSIwIDAgNDMwLjkyNCA0MzAuOTI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MzAuOTI0IDQzMC45MjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMjk2LjkyNCw0MDMuMjQzYy0yMi42NTYsMTAuODc1LTQ3LjUsMTcuODEzLTczLjczNCwxOS44MTN2LTY0LjgxM2MxNC42MDktMS42MjUsMjguNjcyLTQuOTA2LDQxLjYwOS0xMC41OTQgICAgTDI5Ni45MjQsNDAzLjI0M3oiIGZpbGw9IiNGRkZGRkYiLz4KCQk8cGF0aCBkPSJNNjQuODE0LDE5OS44NjhIMC4wMDFjOC4yMTktMTA3LjIxOSw5Ny45MDYtMTkyLDIwNy4xODgtMTkyYzY0LjI5NywwLDEyNC43MzUsMzAuMDk0LDE2My43OTcsNzkuOTY5bDU5LjgxMi0zNC41NjMgICAgbDAuMTI1LDE5Ny44NDRsLTE3MS40MDYtOTguODEzbDU1LjA5NC0zMS44NzVjLTI3LjA2Mi0zMC4zMTMtNjUuOTk5LTQ4LjU2My0xMDcuNDIxLTQ4LjU2MyAgICBDMTMzLjI1MSw3MS44NjgsNzIuODc2LDEyOC4wNTUsNjQuODE0LDE5OS44Njh6IiBmaWxsPSIjRkZGRkZGIi8+CgkJPHBhdGggZD0iTTMyMi42NzQsMzAxLjAyNGw1NiwzMi4zMTJjLTE0LjUzMSwyMS4xNTYtMzIuODc1LDM5LjQ3LTU0LDU0LjAzMWwtMzIuMzE0LTU2ICAgIEMzMDMuOTI0LDMyMi44MDUsMzE0LjExMSwzMTIuNTg2LDMyMi42NzQsMzAxLjAyNHoiIGZpbGw9IiNGRkZGRkYiLz4KCQk8cGF0aCBkPSJNMTkxLjE4OSwzNTguMjQzdjY0LjgxM2MtMjYuMjUtMi01MS4wOTQtOC45MzgtNzMuNzE5LTE5LjgxM2wzMi4wOTQtNTUuNTk0ICAgIEMxNjIuNTMzLDM1My4zMzYsMTc2LjU5NSwzNTYuNjE4LDE5MS4xODksMzU4LjI0M3oiIGZpbGw9IiNGRkZGRkYiLz4KCQk8cGF0aCBkPSJNMTIyLjAzMywzMzEuMzY4bC0zMi4zMTMsNTZjLTIxLjE1Ni0xNC41NjItMzkuNS0zMi44NzUtNTQuMDMxLTU0LjAzMWw1Ni0zMi4zMTIgICAgQzEwMC4yNTEsMzEyLjU4NiwxMTAuNDM5LDMyMi44MDUsMTIyLjAzMywzMzEuMzY4eiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTxwYXRoIGQ9Ik03NS4zNzYsMjczLjQ2MWwtNTUuNTYzLDMyLjA5NEM4LjkzOCwyODIuOTMsMiwyNTguMTE4LDAsMjMxLjg2OGg2NC44MTNDNjYuNDM5LDI0Ni40NjEsNjkuNzIsMjYwLjUyNCw3NS4zNzYsMjczLjQ2MXoiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K');
+	background: url('https://rawgit.com/incace/matFlow/master/assets/redo.svg');
 	background-size: 24px;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -413,6 +430,9 @@ a:active,
 		background-image: none !important;
 		background-color: #2B2E2F;
 	}
+}
+.contentBold {
+    font-weight: 700;
 }
 .highlight {
 	height: 100%;
@@ -450,7 +470,7 @@ a:active,
 	right: 48px;
 	height: 24px;
 	width: 24px;
-	background: url('data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNDc1LjA3NSA0NzUuMDc1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NzUuMDc1IDQ3NS4wNzU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNNDc1LjA3NSwxODYuNTczYzAtNy4wNDMtNS4zMjgtMTEuNDItMTUuOTkyLTEzLjEzNUwzMTUuNzY2LDE1Mi42TDI1MS41MjksMjIuNjk0Yy0zLjYxNC03LjgwNC04LjI4MS0xMS43MDQtMTMuOTktMTEuNzA0ICAgYy01LjcwOCwwLTEwLjM3MiwzLjktMTMuOTg5LDExLjcwNEwxNTkuMzEsMTUyLjZMMTUuOTg2LDE3My40MzhDNS4zMywxNzUuMTUzLDAsMTc5LjUzLDAsMTg2LjU3M2MwLDMuOTk5LDIuMzgsOC41NjcsNy4xMzksMTMuNzA2ICAgbDEwMy45MjQsMTAxLjA2OEw4Ni41MSw0NDQuMDk2Yy0wLjM4MSwyLjY2Ni0wLjU3LDQuNTc1LTAuNTcsNS43MTJjMCwzLjk5NywwLjk5OCw3LjM3NCwyLjk5NiwxMC4xMzYgICBjMS45OTcsMi43NjYsNC45OTMsNC4xNDIsOC45OTIsNC4xNDJjMy40MjgsMCw3LjIzMy0xLjEzNywxMS40Mi0zLjQyM2wxMjguMTg4LTY3LjM4NmwxMjguMTk0LDY3LjM3OSAgIGM0LDIuMjg2LDcuODA2LDMuNDMsMTEuNDE2LDMuNDNjNy44MTIsMCwxMS43MTQtNC43NSwxMS43MTQtMTQuMjcxYzAtMi40NzEtMC4wOTYtNC4zNzQtMC4yODctNS43MTZsLTI0LjU1MS0xNDIuNzQ0ICAgbDEwMy42MzQtMTAxLjA2OUM0NzIuNjA0LDE5NS4zMyw0NzUuMDc1LDE5MC43Niw0NzUuMDc1LDE4Ni41NzN6IE0zMjQuNjE5LDI4OC41bDIwLjU1MSwxMjAuMmwtMTA3LjYzNC01Ni44MjFMMTI5LjYxNCw0MDguNyAgIGwyMC44NDMtMTIwLjJsLTg3LjM2NS04NC43OTlsMTIwLjQ4NC0xNy43bDUzLjk1OS0xMDkuMDY0bDUzLjk1NywxMDkuMDY0bDEyMC40OTQsMTcuN0wzMjQuNjE5LDI4OC41eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=');
+	background: url('https://rawgit.com/incace/matFlow/master/assets/star.svg');
 	background-size: 20px;
 	background-repeat: no-repeat;
 	background-position: 7px 6px;
@@ -459,7 +479,7 @@ a:active,
 	padding: 5px;
 	border-radius: 100%;
 	z-index: 999;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	box-shadow: none;
 	-moz-transition: all 250ms ease;
 	-o-transition: all 250ms ease;
 	-webkit-transition: all 250ms ease;
@@ -483,7 +503,7 @@ a:active,
 	right: 48px;
 	height: 24px;
 	width: 24px;
-	background: url('data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNDc1LjA3NSA0NzUuMDc1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NzUuMDc1IDQ3NS4wNzU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNNDc1LjA3NSwxODYuNTczYzAtNy4wNDMtNS4zMjgtMTEuNDItMTUuOTkyLTEzLjEzNUwzMTUuNzY2LDE1Mi42TDI1MS41MjksMjIuNjk0Yy0zLjYxNC03LjgwNC04LjI4MS0xMS43MDQtMTMuOTktMTEuNzA0ICAgYy01LjcwOCwwLTEwLjM3MiwzLjktMTMuOTg5LDExLjcwNEwxNTkuMzEsMTUyLjZMMTUuOTg2LDE3My40MzhDNS4zMywxNzUuMTUzLDAsMTc5LjUzLDAsMTg2LjU3M2MwLDMuOTk5LDIuMzgsOC41NjcsNy4xMzksMTMuNzA2ICAgbDEwMy45MjQsMTAxLjA2OEw4Ni41MSw0NDQuMDk2Yy0wLjM4MSwyLjY2Ni0wLjU3LDQuNTc1LTAuNTcsNS43MTJjMCwzLjk5NywwLjk5OCw3LjM3NCwyLjk5NiwxMC4xMzYgICBjMS45OTcsMi43NjYsNC45OTMsNC4xNDIsOC45OTIsNC4xNDJjMy40MjgsMCw3LjIzMy0xLjEzNywxMS40Mi0zLjQyM2wxMjguMTg4LTY3LjM4NmwxMjguMTk0LDY3LjM3OSAgIGM0LDIuMjg2LDcuODA2LDMuNDMsMTEuNDE2LDMuNDNjNy44MTIsMCwxMS43MTQtNC43NSwxMS43MTQtMTQuMjcxYzAtMi40NzEtMC4wOTYtNC4zNzQtMC4yODctNS43MTZsLTI0LjU1MS0xNDIuNzQ0ICAgbDEwMy42MzQtMTAxLjA2OUM0NzIuNjA0LDE5NS4zMyw0NzUuMDc1LDE5MC43Niw0NzUuMDc1LDE4Ni41NzN6IE0zMjQuNjE5LDI4OC41bDIwLjU1MSwxMjAuMmwtMTA3LjYzNC01Ni44MjFMMTI5LjYxNCw0MDguNyAgIGwyMC44NDMtMTIwLjJsLTg3LjM2NS04NC43OTlsMTIwLjQ4NC0xNy43bDUzLjk1OS0xMDkuMDY0bDUzLjk1NywxMDkuMDY0bDEyMC40OTQsMTcuN0wzMjQuNjE5LDI4OC41eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=');
+	background: url('https://rawgit.com/incace/matFlow/master/assets/star.svg');
 	background-size: 20px;
 	background-repeat: no-repeat;
 	background-position: 7px 6px;
@@ -492,7 +512,7 @@ a:active,
 	padding: 5px;
 	border-radius: 100%;
 	z-index: 999;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	box-shadow: none;
 }
 .parent>.name {
 	line-height: .8em !important;
@@ -500,7 +520,7 @@ a:active,
 }
 .parent> .name> .content {
 	color: #667079 !important;
-	font-size: 14px !important;
+	font-size: 13px !important;
 	line-height: 16px !important;
 }
 .parent> .name> .content:hover {
@@ -531,72 +551,81 @@ a:active,
 	margin-bottom: 7px;
 }
 .selected.project>.children {
-	padding: 15px 0 0 0;
+	padding: 20px 0 0 0;
 }
 .selected .project.noted>.name,
 .selected .project.open>.name {
 	margin-bottom: 0;
+}
+#expandButton > svg > line {
+    stroke: #495157;
 }
 .selected > .name > #controls > #controlsLeft {
 	top: 58px;
 	left: 60px !important;
 }
 .selected > .name > #controls > #controlsLeft a {
-	font-size: 14px !important;
-	font-weight: 600 !important;
-	padding: 10px 28px !important;
+	font-size: 13px !important;
+	font-weight: 700 !important;
+	padding: 8px 20px !important;
+    text-transform: uppercase;
 }
 .selected > .name > #controls > #controlsLeft a span {
 	margin-right: 0 !important;
 }
-.selected.project> .name {
+.selected.project > .name {
 	color: #FFFFFF !important;
 	padding: 12px 60px !important;
 	background-color: #27AE60 !important;
 	margin: 10px 0 0 0 !important;
 	margin-left: -60px !important;
 	margin-right: -60px !important;
+    font-size: 28px;
 }
-.selected.project> .name span {
-	margin-right: 20px !important;
+div.project.selected > div.name > div > a > span {
+    margin-right: 0 !important;
+    vertical-align: inherit;
 }
-div.project.selected> div.name> div> a> span {
-	margin-right: 0 !important;
+.selected.project > .name a.contentLink {
+    color: #FFFFFF !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    padding: 6px 8px !important;
+    border: 2px solid #93D299;
+    margin: 0 0 0 6px !important;
+    vertical-align: top;
 }
-.selected.project> .name a.contentLink {
-	color: #FFFFFF !important;
-	font-size: 13px !important;
-	font-weight: 600 !important;
-	padding: 8px 10px !important;
-	border: 2px solid #93D299;
-	line-height: 1em !important;
-	margin: 0 !important;
-	vertical-align: middle !important;
+.selected.project > .name a.contentLink:hover {
+    color: #2d8853 !important;
+    background-color: #93D299 !important;
+    border-color: #93D299 !important;
 }
-.selected.project> .name a.contentLink:hover {
-	color: #D5FF91 !important;
-	background-color: #2D8853 !important;
-	border-color: #2D8853 !important;
-}
-.selected.project>.notes {
+.selected.project > .notes {
 	background-color: #2D8853 !important;
 	padding: 12px 60px !important;
 	margin: 0 !important;
 	margin-left: -60px !important;
 	margin-right: -60px !important;
 }
-.selected> .notes> .content {
-	color: #ADF7B4 !important;
+.selected > .notes > .content {
+	color: #50e68d !important;
 	border-bottom: none !important;
 	padding-bottom: 0 !important;
 	margin-bottom: 0 !important;
+    line-height: 22px !important;
 }
-.selected.project>.notes a.contentLink {
+.selected.project > .notes a.contentLink {
 	color: #C8EF81 !important;
 	font-weight: 600 !important;
 }
-.selected.project>.notes a.contentLink:hover {
+.selected.project > .notes a.contentLink:hover {
 	color: #D1F777 !important;
+}
+.selected.project > .children > .project {
+    margin-bottom: 15px !important;
+}
+.selected.project > .children > .project > .children {
+    border-bottom: 1px dashed #383D40;
 }
 .children {
 	border-left: 1px dashed #383D40;
@@ -605,53 +634,50 @@ div.project.selected> div.name> div> a> span {
 }
 .selected .children .project.open,
 .selected .children .project.noted.open {
-	border-bottom: 1px dashed #667079 !important;
 	margin-bottom: 15px !important;
 }
-.parent .project.selected .project {
-}
-.selected>.children>.project>.children>.project {
+.selected > .children > .project > .children > .project {
 	padding: 0;
 	border-bottom: none !important;
-	margin-bottom: 0px !important;
+	margin-bottom: 10px !important;
 }
-.selected>.children>.project>.children>.project>.children {
-	padding-top: 5px !important;
-	margin-bottom: 5px !important;
+.selected > .children > .project > .children > .project > .children {
+	border-bottom: 1px dashed #383D40;
+    padding-bottom: 10px;
 }
-.selected>.children>.project>.children>.project>.children>.project.open {
+.selected > .children > .project > .children > .project > .children > .project.open {
 	border-bottom: none !important;
 	margin-bottom: 0 !important;
 }
-.selected>.children>.project>.children>.project>.children>.project>.children {
+.selected > .children > .project > .children > .project > .children > .project > .children {
 	margin-bottom: 0;
 }
-.selected>.children>.project>.children>.project>.children>.project>.children>.project {
+.selected > .children > .project > .children > .project > .children > .project > .children > .project {
 	border-bottom: none !important;
 	margin-bottom: 0 !important;
 }
-.selected>.children>.project>.children>.project>.children>.project>.children>.project>.children {
+.selected > .children > .project > .children > .project > .children > .project > .children > .project > .children {
 	margin-bottom: 0 !important;
 }
 .selected>.children>.project .project {
 	padding: 0 !important;
 }
-.selected>.children>.project>.children .project>.name {
+.selected>.children > .project > .children .project > .name {
 	margin-bottom: 0;
 }
-.selected>.children>.project>.children .project>.name>.content {
+.selected>.children > .project > .children .project > .name > .content {
 	padding: 5px 0;
-	line-height: 1em;
+	line-height: 1.3em;
 	min-height: inherit !important;
 }
-.project.noted .notes> .content {
+.project.noted .notes > .content {
 	margin-bottom: 5px;
 }
-.project.noted.open .notes> .content {
+.project.noted.open .notes > .content {
 	margin-bottom: 0px;
 }
-.project>.name>.bullet {
-	margin-top: 8px !important;
+.project > .name > .bullet {
+	margin-top: 9px !important;
 	margin-left: 5px;
 	padding: 0;
 	width: 10px;
@@ -663,14 +689,15 @@ div.project.selected> div.name> div> a> span {
 	background-image: none;
 	border: none;
 }
-.project.task>.name>.bullet {
+.project.task > .name > .bullet {
+    margin-top: 9px !important;
 	width: 7px;
 	height: 7px;
 	background-color: transparent;
 	background-image: none;
 	border: 2px solid #495157;
 }
-.project.open>.name>.bullet {
+.project.open > .name > .bullet {
 	margin-top: 7px !important;
 	margin-left: 3px;
 	width: 12px;
@@ -679,8 +706,8 @@ div.project.selected> div.name> div> a> span {
 	background-image: none;
 	border: 1px dashed #495157;
 }
-.project.addedShared>.name>.bullet {
-	margin-top: 7px !important;
+.project.addedShared > .name > .bullet {
+	margin-top: 8px !important;
 	margin-left: 4px;
 	width: 8px;
 	height: 8px;
@@ -690,20 +717,29 @@ div.project.selected> div.name> div> a> span {
 	box-shadow: 0 0 0px 2px rgba(210, 190, 45, 0.35);
 	border: 2px solid #2b2e2f;
 }
-.project>.name>.bullet:hover {
+.page.showCompleted .project.halfOpenSearchMatchAncestorWhenCompletedVisible:not(.shared):not(.addedShared) > .name > .bullet,
+.bullet:hover,
+.project.task > .name > .bullet:hover,
+.project.open > .name > .bullet:hover,
+.project.addedShared > .name > .bullet:hover,
+.page.showCompleted .project.halfOpenSearchMatchAncestorWhenCompletedVisible:not(.shared):not(.addedShared) > .name > .bullet:hover,
+.page:not(.showCompleted) .project.halfOpenSearchMatchAncestorWhenCompletedHidden:not(.shared):not(.addedShared) > .name > .bullet:hover {
+	background-color: transparent;
+}
+.project>.name > .bullet:hover {
 	background-color: #27AE60;
 }
-.project.task>.name>.bullet:hover {
+.project.task > .name > .bullet:hover {
 	background-color: transparent;
 	border-color: #27AE60;
 }
-.project.open>.name>.bullet:hover {
+.project.open > .name > .bullet:hover {
 	background-color: transparent;
 	border-color: #27AE60;
 	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg);
 }
-.project.addedShared>.name>.bullet:hover {
+.project.addedShared > .name > .bullet:hover {
 	background-color: rgba(210, 190, 45, 0.35);
 	-webkit-box-shadow: 0 0 0px 2px #d2be2d;
 	-moz-box-shadow: 0 0 0px 2px #d2be2d;
@@ -728,27 +764,27 @@ div.project.selected> div.name> div> a> span {
 	z-index: 2;
 	border-radius: 100%;
 }
-.project.done> .name> a.bullet {
-	margin-top: 5px !important;
-	margin-left: 2px !important;
-	padding: 4px !important;
-	width: 4px !important;
-	height: 4px !important;
-	-webkit-border-radius: 100% !important;
-	-moz-border-radius: 100% !important;
-	border-radius: 100% !important;
-	background-color: #2D8853 !important;
-	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjlGODMzRDZGQUI0QzExRTRCNEU2RTQ1QUQ3RDg2RUZFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlGODMzRDcwQUI0QzExRTRCNEU2RTQ1QUQ3RDg2RUZFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OUY4MzNENkRBQjRDMTFFNEI0RTZFNDVBRDdEODZFRkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OUY4MzNENkVBQjRDMTFFNEI0RTZFNDVBRDdEODZFRkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4BVcrXAAAAgklEQVR42mL8//8/AyWAiYFCwCIlJUWqHgUgXgDECUD8gIkMzQeA2B5KKzCRoVkeWxjAJBWI1PwQiB1gXsBwFrGascWCPJoheDXDDHgAFXyIZogDIc0gwCgpKYk3kPBpRvcCuksIasYWBuiG4NWMKynDDDlISDM4DAY8M1FsAECAAQBnNiy0Pn00hwAAAABJRU5ErkJggg==') !important;
-	background-position: center 1px !important;
-	background-size: cover;
-	border: 2px solid #2D8853 !important;
+.project.done > .name > a.bullet {
+	margin-top: 6px !important;
+	margin-left: 3px !important;
+	width: 16px !important;
+	height: 16px !important;
+	background-image: url('https://rawgit.com/incace/matFlow/master/assets/check-circle.svg') !important;
+	background-position: center center;
+	background-size: 14px;
+	background-repeat: no-repeat;
+	border: none !important;
+    background-color: transparent !important;
 }
-.project.done> .name,
-.project.doneAppearance> .name {
+.project.done > .name,
+.project.doneAppearance > .name {
 	color: #667079 !important;
 }
-.project.done> .notes> .content {
-	color: #667079 !important;
+.project.done > .notes > .content {
+	color: rgba(39, 174, 96, 0.35) !important;
+}
+.project.done > .name, .project.doneAppearance > .name {
+    color: rgba(39, 174, 96, 0.5) !important;
 }
 .content .contentLink,
 .nameAnimated .contentLink {
@@ -762,15 +798,12 @@ div.project.selected> div.name> div> a> span {
 .name> .content {
 	min-height: 24px !important;
 }
-.noted> .notes> .content {
+.noted > .notes > .content {
 	height: auto !important;
 	min-height: 20px !important;
 	overflow: visible !important;
-	line-height: 20px !important;
+	line-height: 20px;
 	display: block !important;
-	-webkit-box-orient: inherit !important;
-	-webkit-line-clamp: inherit !important;
-	white-space: inherit !important;
 }
 .content .contentTag,
 .nameAnimated .contentTag {
@@ -793,8 +826,10 @@ div.project.selected> div.name> div> a> span {
 	background: #2D8853 !important;
 }
 .content .contentMatch {
-	background-color: transparent !important;
-	color: yellow !important;
+    background-color: rgba(210, 190, 45, 0.25) !important;
+    color: yellow !important;
+    padding: 2px 4px;
+    border: 1px solid rgba(255, 255, 0, 0.25);
 }
 .project.addedToSelection {
 	background: #262829 !important;
@@ -824,10 +859,10 @@ body.windowBlurred .project.addedToSelection {
 	top: 0 !important;
 	padding: 0 !important;
 }
-#message> .messageContent a {
+#message > .messageContent a {
 	color: #DDFF96 !important;
 }
-#message> .close {
+#message > .close {
 	color: #FFF !important;
 }
 .messageContent {
@@ -947,43 +982,64 @@ DIV.bottom.left.corner {
 }
 #savedViewHUDPageContainer {
 	padding: 30px 60px !important;
-	white-space: normal !important;
-	vertical-align: middle !important;
-	position: relative !important;
-	top: 50% !important;
-	transform: translateY(-50%) !important;
+    white-space: normal !important;
+    overflow: auto;
+    height: calc(96vh - 40px);
 }
 .savedViewPage {
-	margin: 12px;
-	width: auto !important;
-	height: auto !important;
-	max-width: 300px !important;
-	text-align: left;
-	background: #495157 !important;
-	border: none !important;
-	color: #fff !important;
-	-moz-border-radius: 0px !important;
-	-webkit-border-radius: 0px !important;
-	border-radius: 0px !important;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.20);
-	-moz-transition: all 250ms ease;
-	-o-transition: all 250ms ease;
-	-webkit-transition: all 250ms ease;
-	transition: all 250ms ease;
-	opacity: 0.75;
+    margin: 0;
+    padding: 12px;
+    width: 65%;
+    height: auto;
+    text-align: center;
+    background: transparent;
+    border: none;
+    color: #696e73;
+    -moz-border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    border-radius: 0px !important;
+    -moz-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+    box-shadow: none !important;
 }
-.savedViewPageFader {
+.savedViewPageFader,
+.savedViewPageSearchStringContainer {
 	display: none !important;
 }
 .savedViewPage.selectedSavedViewPage {
-	top: 0 !important;
-	background-color: #27AE60 !important;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.20);
+    top: 0;
+    color: #27ae60;
+    background-color: transparent;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
-.savedViewPage:hover,
+.savedViewPage:hover {
+    color: #FFF;
+    border: none;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
 .savedViewPage.selectedSavedViewPage:hover {
-	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.15), 0 15px 12px rgba(0, 0, 0, 0.20) !important;
-	opacity: 1;
+    color: #27ae60;
+    border: none;
+}
+.savedViewPageInnerContainer {
+    opacity: 1;
+}
+.savedViewPageName {
+    font-size: 18px;
+    line-height: 1.3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 #controlsLeft,
 #itemSelectionControls {
@@ -991,7 +1047,7 @@ DIV.bottom.left.corner {
 	width: auto !important;
 	background: #495157 !important;
 	border: none !important;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
+	box-shadow: none !important;
 	-moz-border-radius: 0px !important;
 	-webkit-border-radius: 0px !important;
 	border-radius: 0px !important;
@@ -1007,6 +1063,7 @@ DIV.bottom.left.corner {
 	padding: 7px 17px !important;
 	margin-bottom: 0px !important;
 	font-weight: 500 !important;
+    text-transform: uppercase;
 }
 #controlsLeft a:hover,
 #itemSelectionControls a:hover {
@@ -1035,8 +1092,8 @@ DIV.bottom.left.corner {
 	font-size: 0;
 	line-height: 30px;
 	position: absolute;
-	top: 1px;
-	right: 108px;
+	top: 0px;
+    right: 126px;
 	overflow: hidden;
 	width: auto;
 	height: 28px;
@@ -1108,7 +1165,7 @@ span.numSelectedItemsValue {
 }
 .ui-dialog .ui-dialog-titlebar-close span {
 	margin: 0;
-	background: url('data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4IiB2aWV3Qm94PSIwIDAgMzU3IDM1NyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzU3IDM1NzsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxnIGlkPSJjbG9zZSI+CgkJPHBvbHlnb24gcG9pbnRzPSIzNTcsMzUuNyAzMjEuMywwIDE3OC41LDE0Mi44IDM1LjcsMCAwLDM1LjcgMTQyLjgsMTc4LjUgMCwzMjEuMyAzNS43LDM1NyAxNzguNSwyMTQuMiAzMjEuMywzNTcgMzU3LDMyMS4zICAgICAyMTQuMiwxNzguNSAgICIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=');
+	background: url('https://rawgit.com/incace/matFlow/master/assets/close.svg');
 	background-size: 16px;
 	background-position: center center;
 	background-repeat: no-repeat;

@@ -4,6 +4,7 @@
 ## v3.0 ... (15 APRIL 17)
 
 ### ADDITIONS
+`+` Created new loading screen animation  
 `+` Created workflowy SVG icon (AI) and added it to logo section  
 `+` Added new star icon on header bar for starred pages  
 `+` Added new star icon on star page button on interior sections  
@@ -12,19 +13,26 @@
 `+` Added hover/click/active animation to dropmenu icon on header bar    
 `+` Added slide in animation for dropmenu container    
 `+` Restyled UI dialog popup windows to match theme    
-`+` Added minimal scrollbar style    
+`+` Added minimal scrollbar style  
+`+` Added Roboto base font  
 
 #### CHANGES
 `+` Decreased breadcrumb vertical padding  
 `+` Changed layout/style of dropmenu items  
 `+` Changed main button styling  
 `+` Changed search bar styling  
+`+` Changed all base64 encoded images to rawgit hosted images  
+`+` Changed URL in title styling  
+`+` Changed search result styling  
 
 #### FIXES
 `+` Fixed extra gap on right side of screen that was pushing multiple elements over (overflow issue)  
 `+` Fixed button size/padding on header bar  
 `+` Fixed text vertical spacing on header bar  
+`+` Fixed bullet position for all options  
+`+` Fixed bullets for open, children, empty, etc.  
 `+` Fixed starred pages overlay HUD to enable exit (mouse out top)  
+`+` Fixed padding and borders throughout  
 
 #### REMOVALS
 `-` Removed default workflowy text logo  
