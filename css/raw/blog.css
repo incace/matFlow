@@ -1,11 +1,240 @@
-/*
-Extra styling for the workflowy blog because it was all jacked up to shit
-*/
-
+/* Extra styling for the workflowy blog because it was all jacked up to shit */
 body {
     color: #EEE;
     background: #2B2E2F;
 }
 .site {
     background-color: #383D40;
+}
+.site-header {
+    padding: 0 !important;
+    text-align: center;
+    background: #2b2e2f;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+.site-content {
+    padding-top: 160px !important;
+}
+.site-content a:link {
+    text-decoration: none;
+    color: #27ae60;
+}
+.site-content a:hover {
+    color: #ADF7B4;
+}
+.header-image img {
+    content: url(https://rawgit.com/incace/matFlow/master/assets/logo.svg);
+    background-color: #4a88b3;
+    margin: 0;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    -webkit-transform: rotate(0deg) scale(1.2);
+    transform: rotate(0deg) scale(1.2);
+}
+.header-image a::after {
+    width: auto;
+    height: 40px;
+    padding: 0 12px 0 24px;
+    display: inline-block;
+    content: 'Workflowy: Organize your brain.';
+    font-size: 24px;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0 0 0 -10px;
+    font-weight: 700;
+    border-radius: 0px 3px 3px 0px;
+    -moz-border-radius: 0px 3px 3px 0px;
+    -webkit-border-radius: 0px 3px 3px 0px;
+}
+.header-image a:hover img,
+.header-image a:focus img {
+    opacity: 1;
+    -webkit-transform: rotate(360deg) scale(1.2);
+    transform: rotate(360deg) scale(1.2);
+}
+.header-image a:hover::after {
+    color: rgba(255, 255, 255, 0.5);
+}
+.entry-title {
+    border-bottom: 2px dashed #495157;
+    padding-bottom: 25px;
+    color: #838c92;
+}
+@media screen and (min-width: 44.375em) {
+    .entry-title {
+        font-size: 2em;
+    }
+}
+@media screen and (min-width: 61.5625em) {
+    .entry-title {
+        font-size: 3em;
+    }
+}
+.author.vcard a {
+    font-weight: 700;
+    font-size: 16px;
+}
+.gcard .grav-inner {
+    background: #2b2e2f;
+    font-family: inherit;
+    line-height: inherit;
+    text-shadow: none !important;
+    border: 1px solid #495157;
+}
+.gcard .grav-grav {
+    border: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.gcard .grav-grav img {
+    border-radius: 100%;
+}
+.gcard a {
+    color: #27ae60;
+    font-family: inherit !important;
+    font-weight: 700;
+}
+.gcard a:hover {
+    color: #ADF7B4;
+}
+a.grav-view-complete {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+    font-size: 12px;
+    font-weight: 700;
+    color: #FFF !important;
+    border: 2px solid #696E73 !important;
+    text-transform: uppercase;
+    line-height: 22px;
+}
+a.grav-view-complete:hover {
+    color: #fff !important;
+    background: #27ae60;
+    box-shadow: none;
+    border: 2px solid #27ae60 !important;
+}
+body:not(.search-results) article:not(.sticky) .posted-on {
+    border: 1px dashed #495157;
+    border-left: none;
+    border-right: none;
+    padding: 5px 0;
+    font-size: 15px;
+}
+.posted-on a {
+    color: #838c92;
+}
+span.cat-links {
+    border-bottom: 1px dashed #495157;
+    padding-bottom: 10px;
+}
+.tags-links {
+    line-height: 26px;
+}
+.tags-links a {
+    margin: 0;
+    padding: 2px 3px;
+    background: #667079;
+    color: #2b2e2f !important;
+    font-weight: 700;
+}
+.tags-links a:hover {
+    box-shadow: none;
+    background: #27ae60;
+}
+.entry-content h1 {
+    color: #838c92;
+}
+hr {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px dashed #495157;
+    height: 1px;
+}
+.sharedaddy,
+.entry-content #jp-relatedposts {
+    background: #495157;
+    padding: 1.75em;
+}
+.sharedaddy:before,
+.sharedaddy:last-child:after,
+.jp-relatedposts:before,
+.jp-relatedposts:last-child:after {
+    display: none;
+}
+.sd-social-icon .sd-content ul li a.sd-button,
+.sd-social-text .sd-content ul li a.sd-button,
+.sd-content ul li a.sd-button,
+.sd-content ul li .option a.share-ustom,
+.sd-content ul li.preview-item div.option.option-smart-off a,
+.sd-content ul li.advanced a.share-more,
+.sd-social-icon-text .sd-content ul li a.sd-button,
+.sd-social-official .sd-content>ul>li>a.sd-button,
+#sharing_email .sharing_send,
+.sd-social-official .sd-content>ul>li .digg_button >a {
+	margin: 0 4px 0 0;
+	font-size: 13px;
+	font-weight: 600;
+	border-radius: 0px;
+	color: #838c92 !important;
+	background: #383d40;
+	border: none;
+	text-shadow: none;
+	line-height: 23px;
+	padding: 4px 11px 3px 10px;
+}
+.sd-social-icon .sd-content ul li a.sd-button:hover,
+.sd-social-icon .sd-content ul li a.sd-button:active,
+.sd-social-text .sd-content ul li a.sd-button:hover,
+.sd-social-text .sd-content ul li a.sd-button:active,
+.sd-social-icon-text .sd-content ul li a.sd-button:hover,
+.sd-social-icon-text .sd-content ul li a.sd-button:active,
+.sd-social-official .sd-content>ul>li>a.sd-button:hover,
+.sd-social-official .sd-content>ul>li>a.sd-button:active,
+.sd-social-official .sd-content>ul>li .digg_button>a:hover,
+.sd-social-official .sd-content>ul>li .digg_button>a:active {
+	color: #FFF !important;
+	background: #27ae60;
+	border: none;
+}
+.sd-social .sd-button .share-count {
+    background: #C55044;
+    color: #fff;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    display: inline-block;
+    text-align: center;
+    font-size: 9px;
+    padding: 2px 4px;
+    line-height: 9px;
+    vertical-align: middle;
+}
+a.like.sd-button,
+.wpl-button a {
+    margin: 0 4px 4px 0 !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    border-radius: 0px !important;
+    color: #838c92 !important;
+    background: #383d40 !important;
+    border: none !important;
+    text-shadow: none !important;
+    line-height: 23px !important;
+    padding: 4px 11px 3px 10px !important;
+    box-shadow: none !important;
+}
+a.like.sd-button:hover {
+	color: #FFF !important;
+	background: #27ae60 !important;
+	border: none !important;
 }

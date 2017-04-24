@@ -29,7 +29,13 @@ body,
 #savedViewHUD,
 #controlsLeft,
 #itemSelectionControls,
-.ui-widget {
+.ui-widget,
+.button--top-right,
+.headline,
+*, h1, h2, h3, h4, h5, h6, p, li,
+.entry-title,
+.hentry div.sharedaddy h3.sd-title,
+.hentry h3.sd-title {
     font-family: 'Roboto', sans-serif;
 }
 a:link,
@@ -56,7 +62,9 @@ a:active,
 .nameAnimated .contentTag,
 .fancyButton,
 #font-gallery .option-thumb,
-.ui-button {
+.ui-button,
+.header-image img,
+.header-image a::after {
 	-moz-transition: all 250ms ease;
 	-o-transition: all 250ms ease;
 	-webkit-transition: all 250ms ease;
@@ -111,6 +119,7 @@ a:active,
 @-webkit-keyframes spinner {
 	0% {
 		-webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
 		box-shadow: none;
 		border-color: #667079;
 	}
@@ -122,6 +131,7 @@ a:active,
 	}
 	100% {
 		-webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
 		box-shadow: none;
 		border-color: #667079;
 	}
@@ -129,6 +139,7 @@ a:active,
 @keyframes spinner {
 	0% {
 		-webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
 		box-shadow: none;
 		border-color: #667079;
 	}
@@ -140,6 +151,7 @@ a:active,
 	}
 	100% {
 		-webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
 		box-shadow: none;
 		border-color: #667079;
 	}
