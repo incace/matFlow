@@ -15,6 +15,7 @@
 `+` Restyled UI dialog popup windows to match theme    
 `+` Added minimal scrollbar style  
 `+` Added Roboto base font  
+`+` Added Keyboard Shortcuts slide up animation  
 
 #### CHANGES
 `+` Decreased breadcrumb vertical padding  
@@ -24,6 +25,7 @@
 `+` Changed all base64 encoded images to rawgit hosted images  
 `+` Changed URL in title styling  
 `+` Changed search result styling  
+`+` Changed Keyboard Shortcuts styling  
 
 #### FIXES
 `+` Fixed extra gap on right side of screen that was pushing multiple elements over (overflow issue)  
