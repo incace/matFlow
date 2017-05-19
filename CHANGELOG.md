@@ -11,14 +11,15 @@
 `+` Added new undo/redo icons on header bar    
 `+` Added new dropmenu icon on header bar    
 `+` Added hover/click/active animation to dropmenu icon on header bar    
-`+` Added slide in animation for dropmenu container    
-`+` Restyled UI dialog popup windows to match theme    
+`+` Added slide in animation for dropmenu container   
 `+` Added minimal scrollbar style  
 `+` Added Roboto base font  
 `+` Added Keyboard Shortcuts slide up animation  
+`+` Added search bar hover animation  
 
 #### CHANGES
-`+` Decreased breadcrumb vertical padding  
+`+` Decreased breadcrumb vertical padding   
+`+` Restyled UI dialog popup windows to match theme  
 `+` Changed layout/style of dropmenu items  
 `+` Changed main button styling  
 `+` Changed search bar styling  
@@ -26,6 +27,7 @@
 `+` Changed URL in title styling  
 `+` Changed search result styling  
 `+` Changed Keyboard Shortcuts styling  
+`+` Changed "Completed" item icon  
 
 #### FIXES
 `+` Fixed extra gap on right side of screen that was pushing multiple elements over (overflow issue)  

@@ -12,8 +12,10 @@ $RECYCLE.BIN/
 /screenshots
 css/raw/global.min.css
 css/raw/blog.min.css
+css/raw/site.min.css
 css/compressed/global.css
 css/compressed/blog.css
+css/compressed/site.css
 *.sublime-project
 *.sublime-workspace
 *.dat

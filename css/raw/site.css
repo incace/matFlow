@@ -1,0 +1,63 @@
+/* site specific for when you are logged out or whatever */
+.header-bar {
+    border-bottom: none;
+    background: #383D40;
+    padding: 0;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 800px;
+    z-index: 100;
+    white-space: nowrap;
+}
+img.logo--top {
+    content: url(https://rawgit.com/incace/matFlow/master/assets/logo.svg);
+    background-color: #4a88b3;
+    margin: 0;
+    padding: 8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 0;
+}
+.button--top-right {
+    margin: 0;
+    padding: 8px 12px;
+    width: auto;
+    height: 24px;
+    border: 0;
+    border-radius: 0;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-shadow: none !important;
+    background: #495157 !important;
+    font-weight: 700;
+}
+.button--top-right:hover {
+    color: #27AE60 !important;
+}
+.top-section {
+	padding-top: 40px;
+}
+.headline {
+    font-size: 48px;
+    color: #27ae60;
+    font-weight: 300;
+}
+.button--large {
+    color: #fff !important;
+    border: none;
+    border-radius: 0;
+    background: #495157;
+    text-transform: uppercase;
+    text-shadow: none !important;
+    font-weight: 700;
+}
+.button--large:hover {
+    background: #27ae60;
+}
+.story__text {
+    color: #696e73;
+}
