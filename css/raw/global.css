@@ -35,7 +35,9 @@ body,
 *, h1, h2, h3, h4, h5, h6, p, li,
 .entry-title,
 .hentry div.sharedaddy h3.sd-title,
-.hentry h3.sd-title {
+.hentry h3.sd-title,
+#keyboardShortcutHelper,
+#site_message {
     font-family: 'Roboto', sans-serif;
 }
 a:link,
@@ -64,7 +66,10 @@ a:active,
 #font-gallery .option-thumb,
 .ui-button,
 .header-image img,
-.header-image a::after {
+.header-image a::after,
+#keyboardShortcutHelper,
+.ui-dialog .ui-dialog-titlebar-close span,
+.bigSquareButton {
 	-moz-transition: all 250ms ease;
 	-o-transition: all 250ms ease;
 	-webkit-transition: all 250ms ease;
@@ -208,9 +213,10 @@ a:active,
 	height: 24px;
 }
 #searchForm {
-	top: 5px;
+	top: 0;
+    margin-left: 0;
 }
-#searchBox {
+/* #searchBox {
 	color: #A5B6C3;
 	background-color: #4F595F;
 	border: none;
@@ -223,78 +229,124 @@ a:active,
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 0px;
 	border-radius: 0px;
+} */
+#searchBox {
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+    padding: 0 0 0 40px;
+    font-size: 14px;
+    line-height: 1;
+    color: #8d9398;
+    border: 0;
+    background-color: transparent;
+    background-image: url(https://rawgit.com/incace/matFlow/master/assets/searching-grey.svg);
+    background-repeat: no-repeat;
+    background-position: 8px 9px;
+    background-size: auto 24px;
+    border-radius: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    opacity: 1;
+}
+#searchBox:focus,
+#searchBox:hover {
+    outline: none;
+    width: 200px;
+    background-color: #495157;
+    background-image: url('https://rawgit.com/incace/matFlow/master/assets/searching.svg');
+    background-repeat: no-repeat;
+    background-position: 8px 9px;
+    background-size: auto 24px;
+    cursor: default;
 }
 #searchBox::-webkit-input-placeholder {
-	color: #A5B6C3;
+    color: #8d9398;
 	-moz-transition: all 250ms ease;
 	-o-transition: all 250ms ease;
 	-webkit-transition: all 250ms ease;
 	transition: all 250ms ease;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 #searchBox:-moz-placeholder {
-	color: #A5B6C3;
+    color: #8d9398;
 	-moz-transition: all 250ms ease;
 	-o-transition: all 250ms ease;
 	-webkit-transition: all 250ms ease;
 	transition: all 250ms ease;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 #searchBox::-moz-placeholder {
-	color: #A5B6C3;
+    color: #8d9398;
 	-moz-transition: all 250ms ease;
 	-o-transition: all 250ms ease;
 	-webkit-transition: all 250ms ease;
 	transition: all 250ms ease;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 #searchBox:-ms-input-placeholder {
-	color: #A5B6C3;
+    color: #8d9398;
 	-moz-transition: all 250ms ease;
 	-o-transition: all 250ms ease;
 	-webkit-transition: all 250ms ease;
 	transition: all 250ms ease;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 #searchBox:focus::-webkit-input-placeholder {
-	color: rgba(165, 182, 195, 0.35);
+    color: transparent;
 }
 #searchBox:focus:-moz-placeholder {
-	color: rgba(165, 182, 195, 0.35);
+    color: transparent;
 }
 #searchBox:focus::-moz-placeholder {
-	color: rgba(165, 182, 195, 0.35);
+    color: transparent;
 }
 #searchBox:focus:-ms-input-placeholder {
-	color: rgba(165, 182, 195, 0.35);
+    color: transparent;
 }
 #searchCancel {
-	top: 10px !important;
-	right: 10px !important;
-	width: 10px !important;
-	height: 10px !important;
+    top: 14px !important;
+    right: 14px !important;
+    width: 14px !important;
+    height: 14px !important;
+    display: none !important;
 }
 #searchCancel>svg>line {
-	stroke: #A5B6C3;
+	stroke: #8d9398;
 	stroke-width: 2;
 }
 #searchCancel:hover>svg>line {
-	stroke: #738088 !important;
+	stroke: #c55044 !important;
 }
 #savedViewHUDButton {
 	width: 40px;
 	height: 40px;
 	margin: 0;
-	background: url('https://rawgit.com/incace/matFlow/master/assets/star-red.svg');
-	background-size: 24px;
+	background: url('https://rawgit.com/incace/matFlow/master/assets/star.svg');
+	background-size: 26px;
 	background-position: center center;
 	background-repeat: no-repeat;
+    background-color: #495157;
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 0px;
 	border-radius: 0px;
+    opacity: .5;
 }
 #savedViewHUDButton:hover,
 #savedViewHUDButton:active {
+    opacity: 1;
 	background: url('https://rawgit.com/incace/matFlow/master/assets/star.svg');
-	background-size: 24px;
+	background-size: 26px;
 	background-position: center center;
 	background-repeat: no-repeat;
+    background-color: #495157;
 }
 #buttonBar {
 	margin: 0;
@@ -329,14 +381,15 @@ a:active,
 }
 .menu-options {
 	top: 40px;
-	right: -10vw;
+	right: -200px;
 	background: #495157;
 	border: none;
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 0px;
 	border-radius: 0px;
-	display: block;	/* height: calc(100vh - 40px); */
-	padding: 0;    /* opacity: 0; */
+	display: block;
+	padding: 0;
+    max-width: 200px;
 }
 #buttonBar.open .menu-options {
 	/* opacity: 1; */
@@ -366,6 +419,7 @@ a:active,
 	color: #939da7;
 	background: #383d40;
 	overflow: hidden;
+    text-overflow: ellipsis;
 }
 .saveButton,
 .showCompletedButton,
@@ -463,7 +517,7 @@ a:active,
 	background: #1e1e1e !important;
 }
 .notes> .content {
-	color: rgba(255, 255, 255, 0.5) !important;
+	color: #8d9398 !important;
 	font-style: italic;
 }
 .page {
@@ -573,8 +627,9 @@ a:active,
     stroke: #495157;
 }
 .selected > .name > #controls > #controlsLeft {
-	top: 58px;
+	top: 76px;
 	left: 60px !important;
+	background: #242627 !important;
 }
 .selected > .name > #controls > #controlsLeft a {
 	font-size: 13px !important;
@@ -585,53 +640,93 @@ a:active,
 .selected > .name > #controls > #controlsLeft a span {
 	margin-right: 0 !important;
 }
+/* .selected.project > .name,
+.selected.project > .notes {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 100px;
+}
+.selected.project > .notes {
+    top: 168px;
+} */
 .selected.project > .name {
-	color: #FFFFFF !important;
-	padding: 12px 60px !important;
-	background-color: #27AE60 !important;
-	margin: 10px 0 0 0 !important;
-	margin-left: -60px !important;
-	margin-right: -60px !important;
+    color: #FFFFFF !important;
+    padding: 32px 60px !important;
+    background-color: #242627 !important;
+    margin: 10px 0 0 0 !important;
+    margin-left: -60px !important;
+    margin-right: -60px !important;
     font-size: 28px;
+    border-top: 2px solid #383d40;
+    border-bottom: 2px solid #383d40;
+}
+.selected.project.noted > .name {
+    padding: 32px 60px 24px !important;
+    border-bottom: none !important;
 }
 div.project.selected > div.name > div > a > span {
     margin-right: 0 !important;
     vertical-align: inherit;
 }
 .selected.project > .name a.contentLink {
-    color: #FFFFFF !important;
-    font-size: 13px !important;
+    color: #51d087 !important;
+    font-size: 14px !important;
     font-weight: 700 !important;
     padding: 6px 8px !important;
-    border: 2px solid #93D299;
-    margin: 0 0 0 6px !important;
+    margin: 0 !important;
     vertical-align: top;
+    background: #33754f;
 }
 .selected.project > .name a.contentLink:hover {
-    color: #2d8853 !important;
-    background-color: #93D299 !important;
-    border-color: #93D299 !important;
+    color: #FFFFFF !important;
+    border-color: #667079 !important;
 }
 .selected.project > .notes {
-	background-color: #2D8853 !important;
-	padding: 12px 60px !important;
-	margin: 0 !important;
-	margin-left: -60px !important;
-	margin-right: -60px !important;
+    background-color: #242627 !important;
+    padding: 0 60px 16px !important;
+    margin: 0 !important;
+    margin-left: -60px !important;
+    margin-right: -60px !important;
+    border-bottom: 2px solid #383d40;
+}
+.selected.project > .name > .content,
+.selected.project.addedShared > .name > .content {
+    display: initial;
+    padding: 10px 20px;
+}
+.selected.project > .name > .content {
+    background: #27ae60;
+}
+.selected.project.addedShared > .name > .content {
+    background: #d2be2d;
+    color: #242627;
+}
+.selected.project.done > .name > .content:before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 18px !important;
+    height: 18px !important;
+    background-image: url('https://rawgit.com/incace/matFlow/master/assets/check-circle.svg') !important;
+    background-position: center center;
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-color: #242627;
+    margin: 0 10px 0 0;
+    padding: 4px;
+    border-radius: 100%;
 }
 .selected > .notes > .content {
-	color: #50e68d !important;
+	color: #667079 !important;
 	border-bottom: none !important;
 	padding-bottom: 0 !important;
 	margin-bottom: 0 !important;
     line-height: 22px !important;
 }
 .selected.project > .notes a.contentLink {
-	color: #C8EF81 !important;
 	font-weight: 600 !important;
-}
-.selected.project > .notes a.contentLink:hover {
-	color: #D1F777 !important;
 }
 .selected.project > .children > .project {
     margin-bottom: 15px !important;
@@ -641,7 +736,7 @@ div.project.selected > div.name > div > a > span {
 }
 .children {
 	border-left: 1px dashed #383D40;
-	padding: 10px 0 0 15px;
+	padding: 15px 0 0 15px;
 	margin-bottom: 15px;
 }
 .selected .children .project.open,
@@ -651,7 +746,7 @@ div.project.selected > div.name > div > a > span {
 .selected > .children > .project > .children > .project {
 	padding: 0;
 	border-bottom: none !important;
-	margin-bottom: 10px !important;
+	margin-bottom: 15px !important;
 }
 .selected > .children > .project > .children > .project > .children {
 	border-bottom: 1px dashed #383D40;
@@ -759,22 +854,22 @@ div.project.selected > div.name > div > a > span {
 	border-color: #2b2e2f;
 }
 .selected.project.addedShared:before {
-	content: 'S';
-	position: absolute;
-	top: 32px;
-	left: -32px;
-	width: 24px;
-	height: 24px;
-	line-height: 25px;
-	text-align: center;
-	padding: 0;
-	background: #2b2e2f;
-	color: #27ae60;
-	text-transform: uppercase;
-	font-size: 18px;
-	font-weight: bold;
-	z-index: 2;
-	border-radius: 100%;
+    content: 'S';
+    position: absolute;
+    top: 28px;
+    left: -12px;
+    width: 24px;
+    height: 24px;
+    line-height: 25px;
+    text-align: center;
+    padding: 0;
+    background: #2b2e2f;
+    color: #d2be2d;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10;
+    border-radius: 100%;
 }
 .project.done > .name > a.bullet {
 	margin-top: 6px !important;
@@ -788,15 +883,12 @@ div.project.selected > div.name > div > a > span {
 	border: none !important;
     background-color: transparent !important;
 }
+.project.done > .notes > .content {
+	color: rgba(39, 174, 96, 0.35);
+}
 .project.done > .name,
 .project.doneAppearance > .name {
-	color: #667079 !important;
-}
-.project.done > .notes > .content {
-	color: rgba(39, 174, 96, 0.35) !important;
-}
-.project.done > .name, .project.doneAppearance > .name {
-    color: rgba(39, 174, 96, 0.5) !important;
+    color: rgba(39, 174, 96, 0.75);
 }
 .content .contentLink,
 .nameAnimated .contentLink {
@@ -838,10 +930,9 @@ div.project.selected > div.name > div > a > span {
 	background: #2D8853 !important;
 }
 .content .contentMatch {
-    background-color: rgba(210, 190, 45, 0.25) !important;
-    color: yellow !important;
-    padding: 2px 4px;
-    border: 1px solid rgba(255, 255, 0, 0.25);
+    background-color: #e03b69 !important;
+    color: #ffffff !important;
+    padding: 0px 2px;
 }
 .project.addedToSelection {
 	background: #262829 !important;
@@ -907,8 +998,14 @@ body.windowBlurred .project.addedToSelection {
 }
 #site_message {
 	border: none !important;
+    padding: 15px 20px;
+    background: #4780a6;
+    font-size: 14px;
 }
 #site_message .closeButton {
+    top: 8px;
+    margin-left: -32px;
+    width: 30px;
 	-webkit-transition: all 250ms ease;
 	-moz-transition: all 250ms ease;
 	-o-transition: all 250ms ease;
@@ -993,10 +1090,23 @@ DIV.bottom.left.corner {
 	text-align: center !important;
 }
 #savedViewHUDPageContainer {
-	padding: 30px 60px !important;
+    padding: 60px 60px 30px !important;
     white-space: normal !important;
     overflow: auto;
-    height: calc(96vh - 40px);
+    height: calc(92vh - 40px);
+}
+#savedViewHUDPageContainer:before {
+    content: 'Starred Pages';
+    position: fixed;
+    top: 39px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: #c55044;
+    font-size: 18px;
+    color: #ffb2aa;
+    font-weight: 700;
+    z-index: 2;
 }
 .savedViewPage {
     margin: 0;
@@ -1074,7 +1184,7 @@ DIV.bottom.left.corner {
 	margin-right: 0px !important;
 	padding: 7px 17px !important;
 	margin-bottom: 0px !important;
-	font-weight: 500 !important;
+	font-weight: 700 !important;
     text-transform: uppercase;
 }
 #controlsLeft a:hover,
@@ -1149,10 +1259,11 @@ span.numSelectedItemsValue {
 	background: #1a1c1d !important;
 }
 .ui-dialog {
-	-webkit-box-shadow: 0 1px 10px 2px #000000;
-	-moz-box-shadow: 0 1px 10px 2px #000000;
-	box-shadow: 0 1px 10px 2px #000000;
+	-webkit-box-shadow: 0 0 20px 5px #000000;
+	-moz-box-shadow: 0 0 20px 5px #000000;
+	box-shadow: 0 0 20px 5px #000000;
 	outline: 10000px solid rgba(56, 61, 64, 0.8) !important;
+
 }
 .ui-corner-all {
 	-moz-border-radius: 0;
@@ -1161,19 +1272,23 @@ span.numSelectedItemsValue {
 }
 .ui-widget-content {
 	border: none;
-	background: #434a50;
-	color: #FFF;
+	background: #383d40;
+	color: #EEE;
 }
 .ui-widget-header {
-	background: #27ae60;
-	color: #FFF;
-	border: none !important;
+    background: #242627;
+    color: #FFF;
+    border: none !important;
+    border-bottom: 2px solid #495157 !important;
 }
 .ui-dialog .ui-dialog-title {
-	text-shadow: none;
-	margin: 4px 0;
-	font-size: 14px;
-	font-weight: normal;
+    text-shadow: none;
+    margin: 0;
+    padding: 10px 12px 9px;
+    font-size: 18px;
+    font-weight: 700;
+    background: #27ae60;
+    text-transform: uppercase;
 }
 .ui-dialog .ui-dialog-titlebar-close span {
 	margin: 0;
@@ -1181,11 +1296,13 @@ span.numSelectedItemsValue {
 	background-size: 16px;
 	background-position: center center;
 	background-repeat: no-repeat;
+    opacity: .5;
 }
 .ui-dialog .ui-dialog-titlebar-close span:hover {
 	background-size: 16px;
 	background-position: center center;
 	background-repeat: no-repeat;
+    opacity: 1;
 }
 #settingsRight {
 	border-left: 1px solid rgba(255, 255, 255, 0.2);
@@ -1196,22 +1313,80 @@ span.numSelectedItemsValue {
 }
 .fancyButton,
 input[type="submit"].submit.fancyButton {
-	color: #eee;
-	text-shadow: none !important;
-	box-shadow: none !important;
-	border-radius: 0;
-	border: 2px solid #696e73;
-	padding: 6px 10px;
-	text-decoration: none;
-	background: transparent;
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size: 14px;
+    color: #EEE;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    border-radius: 0;
+    border: 2px solid #696e73;
+    padding: 8px 10px 6px;
+    text-decoration: none;
+    background: transparent;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 .fancyButton:hover {
 	box-shadow: none !important;
 	background: #27AE60;
 	border: 2px solid #27AE60;
+}
+#theme-gallery {
+    background: none;
+    background-color: #ddd;
+    width: auto;
+    height: 400px;
+    top: -64px;
+    left: 142px;
+    padding: 15px 8px 15px 15px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+}
+.gallery>.closeMeButton {
+    top: 0;
+    right: 0;
+}
+.closeMeButton {
+    display: block;
+    margin: 0;
+    padding: 4px;
+    background: url(https://rawgit.com/incace/matFlow/master/assets/close.svg);
+    background-size: 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #383d40;
+    width: 16px;
+    height: 16px;
+}
+.closeMeButton:hover {
+    background-position: center center;
+    background-color: #495157;
+}
+#theme-gallery .galleryScroller {
+    padding: 0 10px;
+}
+#theme-gallery .option-thumb {
+    border: none !important;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35) !important;
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35) !important;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35) !important;
+}
+#theme-gallery .option-thumb>.option-pretty-name {
+    padding: 9px 12px;
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+#theme-gallery .option-thumb.current .option-pretty-name {
+    background: #27ae60;
+    opacity: 1;
+}
+.moreInfo {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    color: #383d40;
+    font-weight: 700;
 }
 #font-gallery {
 	border: none;
@@ -1330,6 +1505,38 @@ input[type="submit"].submit.fancyButton {
 .ui-dialog .ui-dialog-buttonpane button:last-child {
 	margin-right: 0 !important;
 }
+#keyboardShortcutHelper {
+    outline: none !important;
+    bottom: 0;
+    right: 10px;
+    background: #c55044;
+    border: none;
+    color: #ffd6d1;
+    border-radius: 0;
+    width: 200px;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+#keyboardShortcutHelper.closed {
+    bottom: -627px;
+}
+#keyboardShortcutHelper.closed table {
+    display: block;
+}
+#keyboardShortcutHelper .ui-widget-header {
+    background: #2b2e2f;
+    border: 2px solid #c55044 !important;
+    color: #c55044;
+}
+#keyboardShortcutHelper td.commandName {
+    background: #383d40;
+    color: #ccc;
+}
+#keyboardShortcutHelper td {
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
 #shared_notice {
 	width: auto;
 	color: #eee;
@@ -1348,6 +1555,130 @@ input[type="submit"].submit.fancyButton {
 #shared_notice strong {
 	border-bottom: 2px solid #27ae60;
 }
+#pro-thank-you-paragraph {
+    color: #ffffff;
+    border: 2px solid #27ae60;
+    border-radius: 0;
+}
+#plan-upgrade-dialog h3 {
+    color: #8d9398;
+}
+#about-wf-pro {
+    width: 310px;
+}
+#premium-features-description {
+    border: none;
+    padding: 0 10px;
+    margin: 20px 0;
+    background: transparent;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+#choose-your-plan {
+    border: none;
+    margin-bottom: 10px;
+    padding: 20px;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background: #495157;
+}
+.payment-form {
+    border: 2px solid #27ae60;
+    padding: 15px;
+    background: #383d40;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+#purchase-info table label {
+    color: #8d9398;
+}
+img.padlock {
+    display:none !important;
+}
+.bigSquareButton {
+    padding: 20px;
+    margin: 10px 0;
+    border: 2px solid #27ae60;
+    background: rgba(39, 174, 96, 0.75);
+    box-shadow: none;
+    border-radius: 0;
+    opacity: .5;
+}
+.bigSquareButton:hover {
+    opacity: 1;
+}
+#helpRadio {
+    border-bottom: 2px solid #667079;
+}
+#helpRadio>span {
+    top: 4px;
+    border: 2px solid transparent;
+    color: #667079;
+}
+#helpRadio>span.current {
+    top: 4px;
+    border-radius: 0 !important;
+    border: 2px solid #667079;
+    border-bottom: none;
+    background: #383d40;
+    color: #FFF;
+}
+#libraryContainer .book {
+    color: #fff;
+}
+#libraryContainer .book.done {
+    color: #667079;
+}
+#libraryContainer .fancyButton {
+    padding: 4px 5px 2px;
+}
+#libraryContainer .book.done:before {
+    content: "";
+    display: inline-block;
+    margin-right: 3px;
+    background-image: url(https://rawgit.com/incace/matFlow/master/assets/check-circle.svg) !important;
+    background-position: center center;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+}
+#libraryContainer .fancyButton.active {
+    box-shadow: none;
+    text-shadow: none;
+    color: #FFF;
+    border: none !important;
+    background: #167ac6;
+    padding: 7px 7px 4px;
+}
+#nextVideoButton.fancyButton {
+    margin-left: -100px;
+    margin-top: -20px;
+    border-radius: 0;
+}
+#afterLibraryVideoCompleteBox .fancyButton {
+    color: #fff;
+}
+.darkPaddedContainer {
+    background: transparent;
+    border: 2px solid #27ae60;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+#howTo table td.commandName {
+    background-color: #495157;
+}
+#howTo td {
+    border: 1px solid #667079;
+}
+
 ::-webkit-scrollbar {
 	width: 8px;
 }

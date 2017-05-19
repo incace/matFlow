@@ -16,6 +16,8 @@
 `+` Added Roboto base font  
 `+` Added Keyboard Shortcuts slide up animation  
 `+` Added search bar hover animation  
+`+` Added check icon to completed selected project   
+`+` Added styling for shared list   
 
 #### CHANGES
 `+` Decreased breadcrumb vertical padding   
@@ -37,6 +39,7 @@
 `+` Fixed bullets for open, children, empty, etc.  
 `+` Fixed starred pages overlay HUD to enable exit (mouse out top)  
 `+` Fixed padding and borders throughout  
+`+` Fixed link layout in selected project title  
 
 #### REMOVALS
 `-` Removed default workflowy text logo  
