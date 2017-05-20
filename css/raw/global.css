@@ -69,7 +69,10 @@ a:active,
 .header-image a::after,
 #keyboardShortcutHelper,
 .ui-dialog .ui-dialog-titlebar-close span,
-.bigSquareButton {
+.bigSquareButton,
+.content .contentTag::before,
+.nameAnimated .contentTag::before,
+#message .close {
 	-moz-transition: all 250ms ease;
 	-o-transition: all 250ms ease;
 	-webkit-transition: all 250ms ease;
@@ -203,7 +206,7 @@ a:active,
 	height: 40px;
 }
 #logo {
-	background-image: url('https://rawgit.com/incace/matFlow/master/assets/logo.svg');
+	background-image: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/logo.svg');
 	background-position: center center;
 	background-size: 24px;
 	background-color: #4a88b3;
@@ -242,7 +245,7 @@ a:active,
     color: #8d9398;
     border: 0;
     background-color: transparent;
-    background-image: url(https://rawgit.com/incace/matFlow/master/assets/searching-grey.svg);
+    background-image: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/searching-grey.svg');
     background-repeat: no-repeat;
     background-position: 8px 9px;
     background-size: auto 24px;
@@ -257,7 +260,7 @@ a:active,
     outline: none;
     width: 200px;
     background-color: #495157;
-    background-image: url('https://rawgit.com/incace/matFlow/master/assets/searching.svg');
+    background-image: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/searching.svg');
     background-repeat: no-repeat;
     background-position: 8px 9px;
     background-size: auto 24px;
@@ -329,7 +332,7 @@ a:active,
 	width: 40px;
 	height: 40px;
 	margin: 0;
-	background: url('https://rawgit.com/incace/matFlow/master/assets/star.svg');
+	background: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/star.svg');
 	background-size: 26px;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -342,7 +345,7 @@ a:active,
 #savedViewHUDButton:hover,
 #savedViewHUDButton:active {
     opacity: 1;
-	background: url('https://rawgit.com/incace/matFlow/master/assets/star.svg');
+	background: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/star.svg');
 	background-size: 26px;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -358,17 +361,17 @@ a:active,
 	width: 40px;
 }
 #buttonBar .menu-icon {
-	background: url('https://rawgit.com/incace/matFlow/master/assets/menu.svg');
+	background: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/menu.svg');
 	margin: 0;
 	padding: 8px;
 	width: 24px;
 	height: 24px;
 }
 #buttonBar:hover .menu-icon {
-	background: url('https://rawgit.com/incace/matFlow/master/assets/menu-h.svg');
+	background: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/menu-h.svg');
 }
 #buttonBar.open .menu-icon {
-	background: url('https://rawgit.com/incace/matFlow/master/assets/menu-h.svg');
+	background: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/menu-h.svg');
 	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg);
 }
@@ -454,13 +457,13 @@ a:active,
 	height: 24px;
 }
 .undo-icon {
-	background: url('https://rawgit.com/incace/matFlow/master/assets/undo.svg');
+	background: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/undo.svg');
 	background-size: 24px;
 	background-position: center center;
 	background-repeat: no-repeat;
 }
 .redo-icon {
-	background: url('https://rawgit.com/incace/matFlow/master/assets/redo.svg');
+	background: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/redo.svg');
 	background-size: 24px;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -536,7 +539,7 @@ a:active,
 	right: 48px;
 	height: 24px;
 	width: 24px;
-	background: url('https://rawgit.com/incace/matFlow/master/assets/star.svg');
+	background: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/star.svg');
 	background-size: 20px;
 	background-repeat: no-repeat;
 	background-position: 7px 6px;
@@ -569,7 +572,7 @@ a:active,
 	right: 48px;
 	height: 24px;
 	width: 24px;
-	background: url('https://rawgit.com/incace/matFlow/master/assets/star.svg');
+	background: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/star.svg');
 	background-size: 20px;
 	background-repeat: no-repeat;
 	background-position: 7px 6px;
@@ -709,7 +712,7 @@ div.project.selected > div.name > div > a > span {
     left: -12px;
     width: 18px !important;
     height: 18px !important;
-    background-image: url('https://rawgit.com/incace/matFlow/master/assets/check-circle.svg') !important;
+    background-image: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/check-circle.svg') !important;
     background-position: center center;
     background-size: 18px;
     background-repeat: no-repeat;
@@ -746,7 +749,7 @@ div.project.selected > div.name > div > a > span {
 .selected > .children > .project > .children > .project {
 	padding: 0;
 	border-bottom: none !important;
-	margin-bottom: 15px !important;
+	margin-bottom: 5px !important;
 }
 .selected > .children > .project > .children > .project > .children {
 	border-bottom: 1px dashed #383D40;
@@ -876,12 +879,16 @@ div.project.selected > div.name > div > a > span {
 	margin-left: 3px !important;
 	width: 16px !important;
 	height: 16px !important;
-	background-image: url('https://rawgit.com/incace/matFlow/master/assets/check-circle.svg') !important;
+	background-image: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/check-circle.svg') !important;
 	background-position: center center;
 	background-size: 14px;
 	background-repeat: no-repeat;
 	border: none !important;
     background-color: transparent !important;
+}
+.project.done > .name > .bullet:hover {
+    -webkit-transform: none;
+    transform: none;
 }
 .project.done > .notes > .content {
 	color: rgba(39, 174, 96, 0.35);
@@ -911,49 +918,78 @@ div.project.selected > div.name > div > a > span {
 }
 .content .contentTag,
 .nameAnimated .contentTag {
-	text-decoration: none !important;
-	color: #FFF !important;
-	background: #2A7794 !important;
-	font-weight: 600 !important;
-	font-size: 14px !important;
-	padding: 2px 4px !important;
-	margin: 0 !important;
-	-moz-border-radius: 0 !important;
-	-webkit-border-radius: 0 !important;
-	border-radius: 0 !important;
+	position: relative;
+    text-decoration: none !important;
+    color: #ff8936 !important;
+    background: #495157 !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    padding: 4px 6px 5px !important;
+    margin: 0 0 0 15px !important;
+    vertical-align: text-bottom;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.content .contentTag::before,
+.nameAnimated .contentTag::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -12px;
+    width: 0;
+    height: 0;
+    border-color: transparent #495157 transparent transparent;
+    border-style: solid;
+    border-width: 12px 12px 12px 0;
+}
+.content .contentTag::after,
+.nameAnimated .contentTag::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -4px;
+    width: 6px;
+    height: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background: #2b2e2f;
+}
+.content .contentTag:hover,
+.nameAnimated .contentTag:hover {
+	background: #ff8936 !important;
+    color: #242627 !important;
+}
+.content .contentTag:hover::before,
+.nameAnimated .contentTag:hover::before {
+	border-color: transparent #ff8936 transparent transparent !important;
 }
 .content .contentTagText,
 .nameAnimated .contentTagText {
 	text-decoration: none !important;
-}
-.content .contentTag:hover {
-	background: #2D8853 !important;
 }
 .content .contentMatch {
     background-color: #e03b69 !important;
     color: #ffffff !important;
     padding: 0px 2px;
 }
+body.windowBlurred .project.addedToSelection,
 .project.addedToSelection {
-	background: #262829 !important;
-}
-body.windowBlurred .project.addedToSelection {
-	background: #262829 !important;
+	background: #383d40;
 }
 .project.highlighted::before,
 .project.moving::before,
 .project.tapped::before,
 .draggableNameClone::before {
-	left: -4px;
-	padding: 2px 2px 0px;
-	background: #262829 !important;
-	-webkit-border-radius: 0px !important;
-	-moz-border-radius: 0px !important;
-	border-radius: 0px !important;
+    background: transparent !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
 }
 #dropdownMessages {
-	width: 50%;
-	margin: auto;
+    width: calc(100vw - 59px);
+    /* margin: auto; */
 }
 #message {
 	background-color: #5D8A25;
@@ -971,30 +1007,26 @@ body.windowBlurred .project.addedToSelection {
 .messageContent {
 	font-size: 16px;
 	position: relative;
-	padding: 20px 25px;
+	padding: 18px 20px 17px;
 	text-align: center;
-	background-color: #c14438;
+	background-color: #C14438;
 }
 #message .close {
 	font-size: 24px;
-	line-height: 56px;
-	top: 0;
-	left: 100%;
-	width: 56px;
-	height: 56px;
-	margin-left: 0;
-	-webkit-transition: all 250ms ease;
-	-moz-transition: all 250ms ease;
-	-o-transition: all 250ms ease;
-	transition: all 250ms ease;
-	-webkit-animation: slide .5s forwards;
-	animation: slide .5s forwards;
-	-webkit-animation-delay: .5s;
-	animation-delay: .5s;
-	text-align: center;
-	opacity: 1;
-	color: #fff;
-	background-color: #2b2e2f;
+    line-height: 51px;
+    top: 0;
+    left: 100%;
+    width: 51px;
+    height: 51px;
+    margin-left: 0;
+    -webkit-animation: slide .5s forwards;
+    animation: slide .5s forwards;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+    text-align: center;
+    opacity: 1;
+    color: #fff;
+    background-color: #2b2e2f;
 }
 #site_message {
 	border: none !important;
@@ -1212,18 +1244,19 @@ DIV.bottom.left.corner {
 }
 #itemSelectionControls > .numSelectedItems {
 	font-size: 0;
-	line-height: 30px;
-	position: absolute;
-	top: 0px;
-    right: 126px;
-	overflow: hidden;
-	width: auto;
-	height: 28px;
-	margin: 0;
-	padding: 4px 8px;
-	color: #fff;
-	border-radius: 0;
-	background: #c14438;
+    line-height: 24px;
+    position: absolute;
+    top: -14px;
+    right: 112px;
+    overflow: hidden;
+    width: auto;
+    height: 24px;
+    min-width: 24px;
+    margin: 0;
+    padding: 4px;
+    color: #fff;
+    border-radius: 100%;
+    background: #C14438;
 }
 span.numSelectedItemsValue {
 	font-size: 18px;
@@ -1292,7 +1325,7 @@ span.numSelectedItemsValue {
 }
 .ui-dialog .ui-dialog-titlebar-close span {
 	margin: 0;
-	background: url('https://rawgit.com/incace/matFlow/master/assets/close.svg');
+	background: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/close.svg');
 	background-size: 16px;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -1350,7 +1383,7 @@ input[type="submit"].submit.fancyButton {
     display: block;
     margin: 0;
     padding: 4px;
-    background: url(https://rawgit.com/incace/matFlow/master/assets/close.svg);
+    background: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/close.svg');
     background-size: 16px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1642,7 +1675,7 @@ img.padlock {
     content: "";
     display: inline-block;
     margin-right: 3px;
-    background-image: url(https://rawgit.com/incace/matFlow/master/assets/check-circle.svg) !important;
+    background-image: url('https://cdn.rawgit.com/incace/matFlow/8b045097/assets/check-circle.svg') !important;
     background-position: center center;
     background-size: 12px;
     background-repeat: no-repeat;
@@ -1679,6 +1712,14 @@ img.padlock {
     border: 1px solid #667079;
 }
 
+::-moz-selection {
+    background: #5d6163;
+    color: #bcec85;
+}
+::selection {
+    background: #5d6163;
+    color: #bcec85;
+}
 ::-webkit-scrollbar {
 	width: 8px;
 }

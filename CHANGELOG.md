@@ -1,7 +1,7 @@
 # matFlow - CHANGELOG
 **matFlow** is a WorkFlowy CSS theme.
 
-## v3.0 ... (15 APRIL 17)
+## v3.0 ... (20 MAY 17)
 
 ### ADDITIONS
 `+` Created new loading screen animation  
@@ -18,6 +18,7 @@
 `+` Added search bar hover animation  
 `+` Added check icon to completed selected project   
 `+` Added styling for shared list   
+`+` Added styling for tags and mentions   
 
 #### CHANGES
 `+` Decreased breadcrumb vertical padding   
@@ -30,6 +31,7 @@
 `+` Changed search result styling  
 `+` Changed Keyboard Shortcuts styling  
 `+` Changed "Completed" item icon  
+`+` Changed selected item styling and layout  
 
 #### FIXES
 `+` Fixed extra gap on right side of screen that was pushing multiple elements over (overflow issue)  
@@ -49,7 +51,7 @@
 
 ### ADDITIONS
 `+` Added complete theme to main website (workflowy.com)  
-`+` Added complete theme to blog (blog.workflowy.com)  
+`+` Added complete theme to blog (blog.workflowy.com) *currently broken*  
 `+` Added horizontal margins to selected project name content link  
 
 #### Dropdown Messages
