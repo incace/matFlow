@@ -4,7 +4,7 @@
 ## v3.1 ... (7 JUNE 17)
 
 ### ADDITIONS
-`+` Added support for ![Workflowy Images](https://chrome.google.com/webstore/detail/workflowy-images/cnecfoeoohjnimhbcojcdfhhdllgleck) Chrome Extension  
+`+` Added support for [Workflowy Images](https://chrome.google.com/webstore/detail/workflowy-images/cnecfoeoohjnimhbcojcdfhhdllgleck) Chrome Extension  
 
 #### FIXES
 `+` Fixed link vertical alignment in selected project title  
