@@ -44,8 +44,8 @@ a:link,
 a:active,
 #logo,
 #searchBox,
-#searchCancel>svg>line,
-.parent> .name> .content,
+#searchCancel > svg > line,
+.parent > .name > .content,
 .saveButton,
 .showCompletedButton,
 #buttonBar,
@@ -54,7 +54,7 @@ a:active,
 #helpButton,
 .undo-button,
 .redo-button,
-.menu-options>.button,
+.menu-options > .button,
 #savedViewHUDButton,
 #controlsLeft,
 #itemSelectionControls,
@@ -72,7 +72,8 @@ a:active,
 .bigSquareButton,
 .content .contentTag::before,
 .nameAnimated .contentTag::before,
-#message .close {
+#message .close,
+.content-img img {
 	-moz-transition: all 250ms ease;
 	-o-transition: all 250ms ease;
 	-webkit-transition: all 250ms ease;
@@ -321,11 +322,11 @@ a:active,
     height: 14px !important;
     display: none !important;
 }
-#searchCancel>svg>line {
+#searchCancel > svg > line {
 	stroke: #8d9398;
 	stroke-width: 2;
 }
-#searchCancel:hover>svg>line {
+#searchCancel:hover > svg > line {
 	stroke: #c55044 !important;
 }
 #savedViewHUDButton {
@@ -401,20 +402,20 @@ a:active,
 .menu-options .topBarButtonTextContainer {
 	line-height: initial !important;
 }
-.menu-options>.button {
+.menu-options > .button {
 	padding: 10px 20px;
 	font-size: 13px;
 	text-transform: uppercase;
 }
-.menu-options>.button:first-child {
+.menu-options > .button:first-child {
 	margin-top: 10px;
 }
-.menu-options>div:hover,
-.menu-options>div>a:hover {
+.menu-options > div:hover,
+.menu-options > div > a:hover {
 	background: none;
 	color: #27AE60;
 }
-.menu-options>#userEmail {
+.menu-options > #userEmail {
 	padding: 7px 10px;
 	margin: 10px 0 0;
 	font-size: 11px;
@@ -511,17 +512,16 @@ a:active,
 	top: 2px;
 	width: 100%;
 }
-.moving>.highlight,
-.highlighted>.highlight {
+.moving > .highlight,
+.highlighted > .highlight {
 	background: #1e1e1e !important;
 }
-.moving>.highlight,
-.highlighted.moveHovered>.highlight {
+.moving > .highlight,
+.highlighted.moveHovered > .highlight {
 	background: #1e1e1e !important;
 }
-.notes> .content {
+.notes > .content {
 	color: #8d9398 !important;
-	font-style: italic;
 }
 .page {
 	background: #2B2E2F !important;
@@ -583,47 +583,47 @@ a:active,
 	z-index: 999;
 	box-shadow: none;
 }
-.parent>.name {
+.parent > .name {
 	line-height: .8em !important;
 	margin: 0;
 }
-.parent> .name> .content {
+.parent > .name > .content {
 	color: #667079 !important;
 	font-size: 13px !important;
 	line-height: 16px !important;
 }
-.parent> .name> .content:hover {
+.parent > .name > .content:hover {
 	color: #A7B4BF !important;
 	text-decoration: none !important;
 }
-.parent> .name> .parentArrow {
+.parent > .name > .parentArrow {
 	color: #495157 !important;
 	line-height: 16px !important;
 	font-size: 16px !important;
 }
-.parent> .name> .parentArrow:before {
+.parent > .name > .parentArrow:before {
 	content: "»" !important;
 }
 .mainTreeRoot.selected {
 	border-top: none !important;
 }
-.mainTreeRoot> .children> .project {
+.mainTreeRoot > .children > .project {
 	font-size: 18px !important;
 }
-.parent.project>.children {
+.parent.project > .children {
 	padding: 0;
 }
 .selected {
 	border-top: none !important;
 }
-.selected .project>.name {
+.selected .project > .name {
 	margin-bottom: 7px;
 }
-.selected.project>.children {
+.selected.project > .children {
 	padding: 20px 0 0 0;
 }
-.selected .project.noted>.name,
-.selected .project.open>.name {
+.selected .project.noted > .name,
+.selected .project.open > .name {
 	margin-bottom: 0;
 }
 #expandButton > svg > line {
@@ -670,7 +670,8 @@ a:active,
 }
 div.project.selected > div.name > div > a > span {
     margin-right: 0 !important;
-    vertical-align: inherit;
+    vertical-align: text-top;
+    line-height: 0.5;
 }
 .selected.project > .name a.contentLink {
     color: #51d087 !important;
@@ -836,7 +837,7 @@ div.project.selected > div.name > div > a > span {
 .page:not(.showCompleted) .project.halfOpenSearchMatchAncestorWhenCompletedHidden:not(.shared):not(.addedShared) > .name > .bullet:hover {
 	background-color: transparent;
 }
-.project>.name > .bullet:hover {
+.project >.name > .bullet:hover {
 	background-color: #27AE60;
 }
 .project.task > .name > .bullet:hover {
@@ -906,7 +907,7 @@ div.project.selected > div.name > div > a > span {
 .nameAnimated .contentLink:hover {
 	color: #ADF7B4 !important;
 }
-.name> .content {
+.name > .content {
 	min-height: 24px !important;
 }
 .noted > .notes > .content {
@@ -973,6 +974,15 @@ div.project.selected > div.name > div > a > span {
     background-color: #e03b69 !important;
     color: #ffffff !important;
     padding: 0px 2px;
+}
+.content-img {
+    padding: 10px 0;
+}
+.content-img img {
+    max-height: 250px !important;
+}
+.content-img img:hover {
+    max-height: 500px !important;
 }
 body.windowBlurred .project.addedToSelection,
 .project.addedToSelection {
@@ -1230,8 +1240,8 @@ DIV.bottom.left.corner {
 	border-top: 1px solid transparent !important;
 	margin: 0 !important;
 }
-.project.shared>.name #controlsLeft a.share,
-.project.addedShared>.name #controlsLeft a.share {
+.project.shared > .name #controlsLeft a.share,
+.project.addedShared > .name #controlsLeft a.share {
 	/* font-weight: bold !important; */
 	font-size: 11px !important;
 	line-height: 1 !important;
@@ -1404,7 +1414,7 @@ input[type="submit"].submit.fancyButton {
     -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35) !important;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35) !important;
 }
-#theme-gallery .option-thumb>.option-pretty-name {
+#theme-gallery .option-thumb > .option-pretty-name {
     padding: 9px 12px;
     border-radius: 0 !important;
     -moz-border-radius: 0 !important;
@@ -1468,7 +1478,7 @@ input[type="submit"].submit.fancyButton {
 	-webkit-border-radius: 0;
 	border-radius: 0;
 }
-.quotaDetailedInformation>.link {
+.quotaDetailedInformation > .link {
 	color: #e2e438;
 }
 #proSettingsBox {
@@ -1649,12 +1659,12 @@ img.padlock {
 #helpRadio {
     border-bottom: 2px solid #667079;
 }
-#helpRadio>span {
+#helpRadio > span {
     top: 4px;
     border: 2px solid transparent;
     color: #667079;
 }
-#helpRadio>span.current {
+#helpRadio > span.current {
     top: 4px;
     border-radius: 0 !important;
     border: 2px solid #667079;

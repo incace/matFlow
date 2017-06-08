@@ -8,6 +8,7 @@
 
 #### FIXES
 `+` Fixed link vertical alignment in selected project title  
+`+` Fixed italic text on notes issue  
 
 ## v3.0 ... (20 MAY 17)
 
