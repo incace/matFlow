@@ -911,11 +911,11 @@ div.project.selected > div.name > div > a > span {
 	min-height: 24px !important;
 }
 .noted > .notes > .content {
-	height: auto !important;
+	/*height: auto !important;*/
 	min-height: 20px !important;
-	overflow: visible !important;
+	/*overflow: visible !important;*/
 	line-height: 20px;
-	display: block !important;
+	/*display: block !important;*/
 }
 .content .contentTag,
 .nameAnimated .contentTag {
