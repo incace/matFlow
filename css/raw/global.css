@@ -702,6 +702,9 @@ div.project.selected > div.name > div > a > span {
 .selected.project > .name > .content {
     background: #27ae60;
 }
+.selected.project > .name > .content:empty {
+    display: none;
+}
 .selected.project.addedShared > .name > .content {
     background: #d2be2d;
     color: #242627;

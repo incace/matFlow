@@ -1,6 +1,12 @@
 # matFlow - CHANGELOG
 **matFlow** is a WorkFlowy CSS theme.
 
+## v3.2 ... (25 SEPTEMBER 17)
+
+#### FIXES
+`+` Fixed collapse issue with multi-line notes  
+`+` Fixed selected project empty title visibility  
+
 ## v3.1 ... (7 JUNE 17)
 
 ### ADDITIONS
